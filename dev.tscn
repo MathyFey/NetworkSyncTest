@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddvwusmp5f8b0"]
+
+[ext_resource type="PackedScene" uid="uid://l4fjnpmhnxma" path="res://menu.tscn" id="4_e65ry"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uicsw"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_d3iec"]
+sky_material = SubResource("ProceduralSkyMaterial_uicsw")
+
+[sub_resource type="Environment" id="Environment_2hb75"]
+background_mode = 2
+sky = SubResource("Sky_d3iec")
+tonemap_mode = 2
+ssao_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+
+[node name="Dev" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2hb75")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.850811, -0.423493, 0.311086, 0, 0.592013, 0.805928, -0.525472, -0.685693, 0.503691, 0, 0, 0)
+shadow_enabled = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+use_collision = true
+size = Vector3(15, 1, 11)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("4_e65ry")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.52003, 7.51684)
