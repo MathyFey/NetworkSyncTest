@@ -12,10 +12,16 @@ sky_material = SubResource("ProceduralSkyMaterial_uicsw")
 [sub_resource type="Environment" id="Environment_2hb75"]
 background_mode = 2
 sky = SubResource("Sky_d3iec")
-tonemap_mode = 2
+tonemap_mode = 3
+ssr_enabled = true
 ssao_enabled = true
+ssil_enabled = true
 sdfgi_enabled = true
+sdfgi_use_occlusion = true
 glow_enabled = true
+fog_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0135
 
 [node name="Dev" type="Node3D"]
 
@@ -29,9 +35,9 @@ shadow_enabled = true
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 use_collision = true
-size = Vector3(15, 1, 11)
+size = Vector3(100, 1, 100)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("4_e65ry")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.52003, 7.51684)
+transform = Transform3D(1, 0, 0, 0, 0.951929, 0.306318, 0, -0.306318, 0.951929, 0, 3.29, 6.495)

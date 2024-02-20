@@ -30,7 +30,7 @@ project/assembly_name="NetworkSyncTest"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")
+enabled=PackedStringArray("res://addons/smoothing/plugin.cfg")
 
 [input]
 
@@ -60,8 +60,13 @@ jump={
 ]
 }
 
+[physics]
+
+common/physics_jitter_fix=0.0
+
 [rendering]
 
 textures/default_filters/anisotropic_filtering_level=4
 scaling_3d/mode=2
 textures/default_filters/texture_mipmap_bias=-1.0
+anti_aliasing/quality/screen_space_aa=1
