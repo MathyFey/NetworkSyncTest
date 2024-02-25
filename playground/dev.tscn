@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddvwusmp5f8b0"]
+
+[ext_resource type="Environment" uid="uid://crvpc8hhh6g62" path="res://playground/assets/dev_env.tres" id="1_hslkx"]
+[ext_resource type="Texture2D" uid="uid://bprbultiq6vam" path="res://icon.svg" id="3_nwxki"]
+[ext_resource type="PackedScene" uid="uid://l4fjnpmhnxma" path="res://playground/menu.tscn" id="4_e65ry"]
+
+[node name="Dev" type="Node3D"]
+
+[node name="UI" parent="." instance=ExtResource("4_e65ry")]
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.850811, -0.423493, 0.311086, 0, 0.592013, 0.805929, -0.525472, -0.685693, 0.503691, 0, 3.28201, 0)
+shadow_enabled = true
+directional_shadow_blend_splits = true
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_hslkx")
+
+[node name="Floor" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.468323, 0.883557, 0, -0.883557, 0.468323, 3.8147e-06, 50.1733, 46.572)
+
+[node name="SpawnPoints" type="Node" parent="."]
+
+[node name="SP_0" type="Node3D" parent="SpawnPoints" groups=["spawn_point"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5618, 1.45748, -22.6994)
+
+[node name="Sprite3D" type="Sprite3D" parent="SpawnPoints/SP_0"]
+transform = Transform3D(1.49606, 0, 0, 0, 1.49606, 0, 0, 0, 1.49606, 0, 0, 0)
+modulate = Color(1, 1, 1, 0.580392)
+texture = ExtResource("3_nwxki")
+
+[node name="SP_1" type="Node3D" parent="SpawnPoints" groups=["spawn_point"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2339, 1.45748, 27.3459)
+
+[node name="Sprite3D" type="Sprite3D" parent="SpawnPoints/SP_1"]
+transform = Transform3D(1.49606, 0, 0, 0, 1.49606, 0, 0, 0, 1.49606, 0, 0, 0)
+modulate = Color(1, 1, 1, 0.580392)
+texture = ExtResource("3_nwxki")
+
+[node name="SP_2" type="Node3D" parent="SpawnPoints" groups=["spawn_point"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.539, 1.45748, -26.2351)
+
+[node name="Sprite3D" type="Sprite3D" parent="SpawnPoints/SP_2"]
+transform = Transform3D(1.49606, 0, 0, 0, 1.49606, 0, 0, 0, 1.49606, 0, 0, 0)
+modulate = Color(1, 1, 1, 0.580392)
+texture = ExtResource("3_nwxki")
+
+[node name="SP_3" type="Node3D" parent="SpawnPoints" groups=["spawn_point"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8298, 1.45748, 16.5409)
+
+[node name="Sprite3D" type="Sprite3D" parent="SpawnPoints/SP_3"]
+transform = Transform3D(1.49606, 0, 0, 0, 1.49606, 0, 0, 0, 1.49606, 0, 0, 0)
+modulate = Color(1, 1, 1, 0.580392)
+texture = ExtResource("3_nwxki")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://l4fjnpmhnxma"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_f3vx7"]
+[ext_resource type="Script" path="res://playground/scripts/menu.gd" id="1_f3vx7"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_f3vx7")
@@ -32,5 +32,11 @@ text = "Server"
 layout_mode = 2
 text = "Client"
 
+[node name="StartButton" type="Button" parent="PanelContainer"]
+visible = false
+layout_mode = 2
+text = "START MATCH"
+
 [connection signal="pressed" from="PanelContainer/GridContainer/Server" to="." method="_on_server_pressed"]
 [connection signal="pressed" from="PanelContainer/GridContainer/Client" to="." method="_on_client_pressed"]
+[connection signal="pressed" from="PanelContainer/StartButton" to="." method="_on_start_button_pressed"]

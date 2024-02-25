@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://wak46extoeot"]
 
 [ext_resource type="PackedScene" uid="uid://bc00bin6mvomx" path="res://addons/capsule_character_pack/3D Models/Capsule Basics/capsule_basic_godot.tscn" id="1_pieyb"]
-[ext_resource type="Script" path="res://character.gd" id="1_vq20m"]
-[ext_resource type="Script" path="res://IdVisualizer.gd" id="2_1ux63"]
+[ext_resource type="Script" path="res://playground/scripts/character.gd" id="1_uptfo"]
+[ext_resource type="Script" path="res://playground/scripts/id_visualizer.gd" id="2_u07mm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kmbh6"]
 
@@ -245,18 +245,26 @@ func _ChangeFlags(f, bSet):
 "
 
 [node name="Player" type="CharacterBody3D"]
-script = ExtResource("1_vq20m")
+script = ExtResource("1_uptfo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_kmbh6")
 
 [node name="IDVisualizer" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.71338, 0)
-billboard = 2
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.09167, 0)
+pixel_size = 0.062
+billboard = 1
 shaded = true
 text = "MY ID"
-script = ExtResource("2_1ux63")
+script = ExtResource("2_u07mm")
+
+[node name="NameTag" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.50989, 0)
+pixel_size = 0.062
+billboard = 1
+shaded = true
+text = "MY ID"
 
 [node name="Smoothing" type="Node3D" parent="."]
 top_level = true

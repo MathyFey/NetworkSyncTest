@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddunbns5o4g1b"
-path.s3tc="res://.godot/imported/Capsule_Godot_Normal_OpenGL.png-94815ca86c602083d0c73f7422f54b03.s3tc.ctex"
+path="res://.godot/imported/Capsule_Godot_Normal_OpenGL.png-94815ca86c602083d0c73f7422f54b03.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://addons/capsule_character_pack/Materials/Textures/Capsule_Godot_Normal_OpenGL.png"
-dest_files=["res://.godot/imported/Capsule_Godot_Normal_OpenGL.png-94815ca86c602083d0c73f7422f54b03.s3tc.ctex"]
+dest_files=["res://.godot/imported/Capsule_Godot_Normal_OpenGL.png-94815ca86c602083d0c73f7422f54b03.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
